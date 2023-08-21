@@ -1,0 +1,10 @@
+/.metadata/
+
+.project
+/.settings/
+.classpath
+*.class
+/bin/
+
+.metadata/
+exerciioossaula/.metadata/

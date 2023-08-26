@@ -11,17 +11,32 @@ public class AgendaTeste {
 		Contato c4 = new Contato("Bagrencia", "(51) 000000000", "negge@gmail.com", TipoContato.PROFISSIONAL);
 
 		Agenda a1 = new Agenda();
-		a1.adiciona(c2);
-		a1.adiciona(c1);
-		a1.adiciona(c3);
-		a1.adiciona(c4);
-
+		a1.adicionaContato(c2);
+//		a1.adicionaContato(c1, 0);  
+		a1.adicionaContato(c3, 1);
+		a1.adicionaContato(c4, 2);
+		
+	
 		Contato[] lista = a1.getAgenda();
 
 		Contato contConsultado = a1.busca(2);
+		
+		
 //		exibeInfo(contConsultado);
 		
-		mostraAgenda(lista);
+//		mostraAgenda(lista);
+		
+		if (a1.removerContato(c2)) {
+			System.out.println("Contato Removido");
+		}
+		else {
+			System.out.println("Contato Removido");
+		
+		}
+		
+		System.out.println("Posicao do contato: " + a1.consultaPosicao(c1));
+		mostraAgenda(lista)
+		;
 	}
 
 	private static void mostraAgenda(Contato[] lista) {

@@ -5,10 +5,14 @@ public class Agenda {
 	private static final int posicao_INVALIDA = -1;
 	private Contato[] agenda;
 	private int numeroElementos = 0;
-
-	public Agenda() {
-		agenda = new Contato[MAXIMO_ELEMENTOS];
+	
+	public Agenda(int tamanho) {
+		agenda = new Contato[tamanho];
 		numeroElementos = 0;
+	}
+	
+	public Agenda() {
+		this(MAXIMO_ELEMENTOS);
 	}
 
 	public boolean adicionaContato(Contato contato) {

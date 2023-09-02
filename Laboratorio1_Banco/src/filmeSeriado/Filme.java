@@ -65,4 +65,12 @@ public class Filme {
 	public void setTipo(TipoVideo tipo) {
 		this.tipo = tipo;
 	}
+
+	@Override
+	public String toString() {
+		return "Filme [codigo=" + codigo + ", ano=" + ano + ", titulo=" + titulo + ", diretor=" + diretor + ", atores="
+				+ atores + ", tipo=" + tipo + "]";
+	}
+	
+	
 }

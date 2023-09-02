@@ -45,7 +45,7 @@ public class ListaFilmes {
 	}
 	
 	public boolean checaPosicao(int posicao) {
-		if (posicao >= maximoFilmes || listaFilmes != null || numeroFilmes == maximoFilmes || posicao <0) {
+		if (posicao >= maximoFilmes || listaFilmes[posicao] != null || numeroFilmes == maximoFilmes || posicao <0) {
 			return false;
 		}
 		return true;

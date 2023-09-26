@@ -1,15 +1,14 @@
 package salarios;
 
 public class FuncionarioComissionado extends Funcionario {
-	
 
 	private double taxaComissao;
 	private double vendasBrutas;
 
-	public FuncionarioComissionado(String nome, String CPF, double taxaComissao, double vendasBrutas) {
-		super(nome, CPF);
-		this.taxaComissao = taxaComissao;
-		this.vendasBrutas = vendasBrutas;
+	public FuncionarioComissionado(String nome, String CPF, char Genero, double taxaComissao, double vendasBrutas) {
+		super(nome, CPF, Genero);
+		this.setTaxaComissao(taxaComissao);
+		this.setVendasBrutas(vendasBrutas);
 	}
 
 	public FuncionarioComissionado() {
@@ -34,7 +33,7 @@ public class FuncionarioComissionado extends Funcionario {
 
 	@Override
 	public double getRendimentos() {
-		
+
 		return this.getTaxaComissao() * this.getVendasBrutas();
 	}
 

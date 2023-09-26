@@ -1,28 +1,25 @@
 package salarios;
 
-public class FuncionarioHorista extends Funcionario{
+public class FuncionarioHorista extends Funcionario {
 	private double horasTrabalhadas;
 	private double salarioHora;
-	
-	public FuncionarioHorista(String nome, String cPF, double salarioHora, double horasTrabalhada) {
-		super(nome, cPF);
+
+	public FuncionarioHorista(String nome, String cPF, char Genero, double salarioHora, double horasTrabalhada) {
+		super(nome, cPF, Genero);
 		this.setHorasTrabalhadas(horasTrabalhada);
 		this.setSalarioHora(salarioHora);
 	}
-	
+
 	public FuncionarioHorista() {
 		super();
 	}
-	
+
 	@Override
 	public double getRendimentos() {
 		double rendimento;
-		if (this.getHorasTrabalhadas()<=40)
-		{
-			rendimento =  this.getHorasTrabalhadas() * this.getSalarioHora();
-		}
-		else
-		{
+		if (this.getHorasTrabalhadas() <= 40) {
+			rendimento = this.getHorasTrabalhadas() * this.getSalarioHora();
+		} else {
 			rendimento = this.getSalarioHora() * 40;
 			rendimento += (this.getHorasTrabalhadas() - 40) * this.getSalarioHora() * 1.5;
 		}

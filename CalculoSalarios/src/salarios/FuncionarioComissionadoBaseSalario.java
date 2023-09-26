@@ -2,13 +2,15 @@ package salarios;
 
 public class FuncionarioComissionadoBaseSalario extends FuncionarioComissionado {
 	private double salario;
-	
-	
-	
-	public FuncionarioComissionadoBaseSalario(String nome, String CPF, double taxaComissao, double vendasBrutas,
+
+	public FuncionarioComissionadoBaseSalario(String nome, String CPF, char Genero, double taxaComissao, double vendasBrutas,
 			double salario) {
-		super(nome, CPF, taxaComissao, vendasBrutas);
+		super(nome, CPF, Genero, taxaComissao, vendasBrutas);
 		this.setSalario(salario);
+	}
+	
+	public FuncionarioComissionadoBaseSalario() {
+		super();
 	}
 
 	public double getSalario() {
@@ -21,7 +23,7 @@ public class FuncionarioComissionadoBaseSalario extends FuncionarioComissionado 
 
 	@Override
 	public double getRendimentos() {
-		
-		return this.getTaxaComissao() * this.getVendasBrutas();
+
+		return this.getSalario() + this.getTaxaComissao() * this.getVendasBrutas();
 	}
 }

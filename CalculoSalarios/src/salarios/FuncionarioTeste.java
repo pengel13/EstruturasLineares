@@ -5,7 +5,7 @@ public class FuncionarioTeste {
 	public static void main(String[] args) {
 
 		Funcionario funcHorista = new FuncionarioHorista("Pedro Engel", "05426366090", 'M', 50.0, 45.0);
-		Funcionario funcComissionado = new FuncionarioComissionado("Arthur Keka", "89085297800", 'F', 0.50, 2500);
+		Funcionario funcComissionado = new FuncionarioComissionado("Arthur Keka", "89085297800", 'G', 0.50, 2500);
 		Funcionario funcComissionadoSalario = new FuncionarioComissionadoBaseSalario("Lorenzo KS", "15091903000", 'M',
 				0.15, 5000, 1200);
 		Funcionario funcAssalariado = new FuncionarioAssalariado("Guilherme Lacerda", "00000000000", 'M', 3100);

@@ -4,17 +4,16 @@ public abstract class Funcionario {
 	private String nome;
 	private String CPF;
 	private char Genero;
-	private boolean GeneroIsValid;
-	private boolean CpfIsValid;
+
 	public Funcionario() {
 	}
 
 	public Funcionario(String nome, String cPF, char Genero) {
-		if (CpfIsValid && GeneroIsValid){
+		if (validaGenero(Genero) && validaCpf(cPF)) {
+			this.setNome(nome);
 			this.setCPF(cPF);
 			this.setGenero(Genero);
 		}
-
 
 	}
 
@@ -23,17 +22,21 @@ public abstract class Funcionario {
 	}
 
 	public void setGenero(char genero) {
+		this.Genero = genero;
+	}
+
+	public boolean validaGenero(char genero) {
 		try {
 			if (genero != 'F' && genero != 'M') {
-				GeneroIsValid = false;
 				throw new AppException("GÊNERO INVÁLIDO");
 			}
-			
+			return true;
 		} catch (AppException e) {
 			System.err.println(e);
+			//System.err.println(e.getCause());
+			return false;
 		}
-		GeneroIsValid = true;
-		this.
+		
 	}
 
 	public abstract double getRendimentos();
@@ -50,19 +53,22 @@ public abstract class Funcionario {
 		return CPF;
 	}
 
-	public boolean setCPF(String cPF) {
+	public void setCPF(String cPF) {
+		this.CPF = cPF;
+	}
+
+	public boolean validaCpf(String cpf) {
 		try {
-			if (cPF.length() != 11) {
-
+			if (cpf.length() != 11) {
 				throw new AppException("CPF INVÁLIDO");
-
 			}
-			this.CPF = cPF;
 			return true;
 		} catch (AppException e) {
 			e.printStackTrace();
+			//System.err.println(e.getCause());
+			return false;
 		}
-		return false;
 
 	}
+
 }

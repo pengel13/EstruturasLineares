@@ -5,7 +5,9 @@ public class Candidato {
 	private String partidoPolitico;
 	private int idade;
 	private int nDeVotos;
-	
+
+	public Candidato () {}
+
 	public Candidato(String nome, String partidoPolitico, int idade, int nDeVotos) {
 		this.nome = nome;
 		this.partidoPolitico = partidoPolitico;

@@ -8,7 +8,7 @@ public class CandidatoTeste {
 	public static void main(String[] args) {
 		Comparator<Candidato> comparaIdade = new CandidatoComparaIdade();
 		PriorityQueue<Candidato> OrdenadoIdade = new PriorityQueue<Candidato>(10, comparaIdade);
-		Candidato[] ListaCandidatos = new Candidato
+//		Candidato[] ListaCandidatos = new Candidato();
 		Candidato c1 = new Candidato("Guilherme Lacerda", "GFBPA", 15, 200);
 		Candidato c2 = new Candidato("Arthur Kellerman", "KEKA", 20, 201);
 		Candidato c3 = new Candidato("Pedro Engel", "PSOL", 10, 289);

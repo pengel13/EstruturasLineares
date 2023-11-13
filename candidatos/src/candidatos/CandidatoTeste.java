@@ -1,6 +1,8 @@
 package candidatos;
 
 import java.util.Comparator;
+import java.lang.reflect.Array;
+import java.util.*;
 import java.util.PriorityQueue;
 
 public class CandidatoTeste {

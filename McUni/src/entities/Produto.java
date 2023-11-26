@@ -3,6 +3,13 @@ package entities;
 public class Produto {
 	private String nome;
 	private float preco;
+	
+	public Produto() {}
+	
+	public Produto(String nome, float preco) {
+		this.nome = nome;
+		this.preco = preco;
+	}
 	public String getNome() {
 		return nome;
 	}
@@ -12,10 +19,17 @@ public class Produto {
 	public float getPreco() {
 		return preco;
 	}
-	public void setPreco(float preco) {
+	public boolean setPreco(float preco) {
 		if (preco > 0 ) {
-			
+			this.preco = preco;
+			return true;
 		}
-		this.preco = preco;
+		return false;
 	}
+
+	@Override
+	public String toString() {
+		return  nome;
+	}
+	
 }

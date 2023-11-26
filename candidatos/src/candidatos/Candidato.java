@@ -8,12 +8,18 @@ public class Candidato {
 
 	public Candidato () {}
 
-	public Candidato(String nome, String partidoPolitico, int idade, int nDeVotos) {
-		this.nome = nome;
-		this.partidoPolitico = partidoPolitico;
-		this.idade = idade;
-		this.nDeVotos = nDeVotos;
-	}
+	public Candidato(String nome, String partidoPolitico, int idade, int nDeVotos) throws Exception {
+		if(validaIdade(idade) && validaNDeVotos(nDeVotos)) {
+			this.nome = nome;
+			this.partidoPolitico = partidoPolitico;
+			this.idade = idade;
+			this.nDeVotos = nDeVotos;
+		}
+		else {
+			throw new Exception("Candidato Inválido.");
+			}
+		}
+	
 
 	public String getNome() {
 		return nome;
@@ -45,6 +51,19 @@ public class Candidato {
 
 	public void setnDeVotos(int nDeVotos) {
 		this.nDeVotos = nDeVotos;
+	}
+	
+	public boolean validaIdade(int idade) {
+		if(idade < 18) {
+			return false;
+		}
+		return true;
+	}
+	public boolean validaNDeVotos(int nVotos) {
+		if (nVotos<0) {
+			return false;
+		}
+		return true;
 	}
 
 	@Override

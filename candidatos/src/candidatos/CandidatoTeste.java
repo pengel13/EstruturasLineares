@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class CandidatoTeste {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws Exception {
 		
 		int resp = 0;
 		while (resp!=7) {
@@ -25,7 +25,7 @@ public class CandidatoTeste {
 		return scanner.nextInt();
 	}
 
-	public static void mostraResposta(int resposta) {
+	public static void mostraResposta(int resposta) throws Exception {
 		Comparator<Candidato> comparaIdade = new CandidatoComparaIdade();
 		Comparator<Candidato> comparaVoto = new CandidatoComparaVotos();
 		Candidato[] candidatos = criaCandidatos();
@@ -61,11 +61,11 @@ public class CandidatoTeste {
 		}
 	}
 	
-	public static Candidato[] criaCandidatos() {
-		Candidato c1 = new Candidato("Guilherme Lacerda", "PLDB", 15, 200);
+	public static Candidato[] criaCandidatos() throws Exception {
+		Candidato c1 = new Candidato("Guilherme Lacerda", "PLDB", 18, 200);
 		Candidato c2 = new Candidato("Arthur Kellerman", "PDTB", 20, 201);
-		Candidato c3 = new Candidato("Pedro Engel", "GFBA", 10, 289);
-		Candidato c4 = new Candidato("Lucas Engel", "PCDB", 12, 635);
+		Candidato c3 = new Candidato("Pedro Engel", "GFBA", 109, 289);
+		Candidato c4 = new Candidato("Lucas Engel", "PCDB", 19, 635);
 		Candidato c5 = new Candidato("Luis Engel", "PCDB", 55, 210);
 		Candidato c6 = new Candidato("Elis Engel", "PT", 52, 963);
 		Candidato c7 = new Candidato("Renato Spohr", "PSOL", 85, 211);

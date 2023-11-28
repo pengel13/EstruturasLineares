@@ -1,6 +1,10 @@
-package entities;
+package main;
 
-import java.util.*;
+import java.util.Scanner;
+
+import entities.FilaPedidos;
+import entities.Pedido;
+import entities.Produto;
 
 public class FilaPedidosTeste {
 	public static void main(String[] args) {

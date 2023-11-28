@@ -15,9 +15,9 @@ public class FilaPedidos {
 	public String addPedido(Pedido pedido) {
 		boolean confirmacaoPedido = queue.offer(pedido);
 		if (confirmacaoPedido) {
-			return pedido.toString() + "entrou na fila!";
+			return pedido.toString() + " entrou na fila!";
 		}
-		return pedido.toString() + "não entrou na fila!";
+		return pedido.toString() + " não entrou na fila!";
 	}
 	public void mostraPedidos() {
 		for (Pedido p : this.queue) {
